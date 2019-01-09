@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Stories from './Stories'
 import {HashRouter as Router, Route} from 'react-router-dom'
+import SingleStory from './SingleStory'
 
 export default class Main extends React.Component {
   render () {
@@ -16,6 +17,7 @@ export default class Main extends React.Component {
           </div>
           <Route exact path='/' component={Stories} />
           <Route path='/stories' component={Stories} />
+          <Route path='/single-story' component={SingleStory} />
         </div>
       </Router>
     )
