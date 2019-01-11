@@ -51,9 +51,9 @@ export default class SingleAuthor extends Component {
         </div>
 
         <div>
-          <Route  path='/authors/:authorId/comments'
-                  render={() => <Stories stories={author.stories} />} />
           <Route  path='/authors/:authorId/stories'
+                  render={() => <Stories stories={author.stories} />} />
+          <Route  path='/authors/:authorId/comments'
                   render={() => <Comments comments={author.comments} />} />
         </div>
       </div>
