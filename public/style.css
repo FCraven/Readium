@@ -132,6 +132,7 @@ td {
 /* classes */
 .active {
   border-bottom: 1px solid gray;
+  color: black
 }
 
 .author {
