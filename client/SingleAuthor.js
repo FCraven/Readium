@@ -4,7 +4,7 @@ export default class SingleAuthor extends Component {
   render() {
     return (
       <div id='single-author' className='column'>
-        <div id='sinle-author-detail' className='row'>
+        <div id='single-author-detail' className='row'>
           <div className='column mr1'>
             <h1>AUTHOR_NAME</h1>
             <p>AUTHOR_BIO</p>
