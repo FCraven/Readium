@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Stories from './Stories'
 import axios from 'axios'
 
 export default class AllStories extends Component {
@@ -23,6 +24,7 @@ export default class AllStories extends Component {
     const stories = this.state.stories
 
     return (
+      <Stories stories={stories} />
     )
   }
 }

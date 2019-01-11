@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Stories from './Stories'
+import AllStories from './AllStories'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import SingleStory from './SingleStory'
 import Authors from './Authors'
@@ -17,8 +17,8 @@ export default class Main extends React.Component {
             </div>
             <Navbar />
           </div>
-          <Route exact path='/' component={Stories} />
-          <Route exact path='/stories' component={Stories} />
+          <Route exact path='/' component={AllStories} />
+          <Route exact path='/stories' component={AllStories} />
           <Route path='/stories/:storyId' component={SingleStory} />
           <Route exact path='/authors' component={Authors} />
           <Route path='/authors/:authorId' component={SingleAuthor} />

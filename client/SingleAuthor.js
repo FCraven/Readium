@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import {Link, Route} from 'react-router-dom'
 import Comments from './Comments'
+import Stories from './Stories'
 import axios from 'axios'
 
 export default class SingleAuthor extends Component {
@@ -40,11 +42,19 @@ export default class SingleAuthor extends Component {
           </div>
           <img src={author.imageUrl} />
         </div>
+
         <hr />
+
+        <div id='single-author-nav'>
+          <Link to={`/authors/${author.id}/comments`}>Comments</Link>
+          <Link to={`/authors/${author.id}/stories`}>Stories</Link>
+        </div>
+
         <div>
-          <h4>STORIES</h4>
-          <h4>COMMENTS</h4>
-            <Comments comments={author.comments} />
+          <Route  path='/authors/:authorId/comments'
+                  render={() => <Stories stories={author.stories} />} />
+          <Route  path='/authors/:authorId/stories'
+                  render={() => <Comments comments={author.comments} />} />
         </div>
       </div>
     )
