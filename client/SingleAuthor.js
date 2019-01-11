@@ -21,18 +21,20 @@ export default class SingleAuthor extends Component {
     const [author, stories, comments] = dataArr
     author.stories = stories
     author.comments = comments
-
+    this.setState({author})
   }
 
   render() {
+    const {author} = this.state
+
     return (
       <div id='single-author' className='column'>
         <div id='single-author-detail' className='row'>
           <div className='column mr1'>
-            <h1>AUTHOR_NAME</h1>
-            <p>AUTHOR_BIO</p>
+            <h1>{author.name}</h1>
+            <p>A{author.bio}</p>
           </div>
-          <img src='AUTHOR-IMAGEURL' />
+          <img src={author.imageUrl} />
         </div>
         <hr />
         <div>
