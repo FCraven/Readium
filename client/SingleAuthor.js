@@ -44,7 +44,7 @@ export default class SingleAuthor extends Component {
         <div>
           <h4>STORIES</h4>
           <h4>COMMENTS</h4>
-          <Comments comments={author.comments} />
+            <Comments comments={author.comments} />
         </div>
       </div>
     )
